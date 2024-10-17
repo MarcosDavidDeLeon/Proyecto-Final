@@ -8,12 +8,12 @@ GO
 ALTER proc [dbo].[InsertarUsuario](
 @NombreUsuario varchar(20),
 @Cuenta varchar(20),
-@Contraseï¿½a varchar(20)
+@Contraseña varchar(20)
 )
 as
 begin
-insert into Usuarios (NombreUsuario,Cuenta,Contraseï¿½a)
-values (@NombreUsuario,@Cuenta,@Contraseï¿½a)
+insert into Usuarios (NombreUsuario,Cuenta,Contraseña)
+values (@NombreUsuario,@Cuenta,@Contraseña)
 end
 
 
@@ -156,7 +156,7 @@ ALTER proc [dbo].[ActualizarUsuario](
 @IdUsuario int,
 @NombreUsuario varchar(20),
 @Cuenta varchar(20),
-@Contraseï¿½a varchar(20)
+@Contraseña varchar(20)
 )
 as
 begin
@@ -164,7 +164,7 @@ update Usuarios
 set
 NombreUsuario = @NombreUsuario,
 Cuenta = @Cuenta,
-Contraseï¿½a = @Contraseï¿½a
+Contraseña = @Contraseña
 where IdUsuario = @IdUsuario
 end
 
